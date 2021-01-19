@@ -6,13 +6,14 @@
 
 body {
   width: 100%;
+  font-family: 'Mulish', sans-serif;
 }
 
 
 /* --------------------------- Header section --------------------------- */
 
 header{
-  background-color: lightblue;
+  background-color: white;
 }
 
 /* --------- Navbar --------- */
@@ -21,7 +22,6 @@ header{
   height: 100px;
   width: 90%;
   margin: auto;
-  background-color: lightyellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,14 +37,49 @@ header{
 .navbar .menu{
   width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
+.navbar .menu a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding:20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  position: relative;
+  cursor: url('../img/pointer.png'), pointer;
+}
+
+.navbar .menu .linkMenu:hover::after{
+  content: "";
+  display: block;
+  margin: -9px auto;
+  width: 100%;
+  border-bottom: 10px solid #f5d8ca;
+}
+
+
 
 /* --------- Jumbotron --------- */
 
 .jumbo{
   height: 634px;
   background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbo .jumboLeft{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.jumbo .jumboRight{
+
 }
 
 

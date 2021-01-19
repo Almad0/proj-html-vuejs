@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <title>Mareè-clone</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Mareè clone</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -16,23 +18,18 @@
       <div class="navbar">
         <!-- qui usare vue? bo  -->
         <div class="logo">
-          <img src="./assets/img/logo-sidearea-1.png" alt="Scritta mareè con foglioline color salmone sulla destra">
+          <img :src=`${logo}` alt="Scritta mareè con foglioline color salmone sulla destra">
         </div>
 
         <!-- qui usare sicuramente vue -->
-        <div class="menu">
-          <div class="elementMenu">menu 1</div>
-          <div class="elementMenu">menu 2</div>
-          <div class="elementMenu">menu 3</div>
-          <div class="elementMenu">menu 1</div>
-          <div class="elementMenu">menu 2</div>
-          <div class="elementMenu">menu 3</div>
-          <div class="elementMenu">pall</div>
-
+        <div class="menu" >
+          <a class="linkMenu" v-for="(links, index) in navLink" :href=`${links.url}`>{{links.name}}</a>
+          <a href="#"> <img src="./assets/img/svg/svg-1.svg" alt=""> </a>
         </div>
       </div>
       <div class="jumbo">
-        <!-- carousel -->
+        <div class="jumboLeft"></div>
+        <div class="jumboRight"></div>
       </div>
     </header>
 
