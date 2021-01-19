@@ -6,34 +6,49 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <title>Mareè clone</title>
+  <title>Marèe clone</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <div id="root">
-<!-- ................... Header section................... -->
+<!-- ................... Header section ................... -->
     <header>
 
       <div class="navbar">
-        <!-- qui usare vue? bo  -->
+        <!-- Caricato logo tramite VueJs  -->
         <div class="logo">
-          <img :src=`${logo}` alt="Scritta mareè con foglioline color salmone sulla destra">
+          <img :src=`${logo}` alt="Scritta Mareè con foglioline color salmone sulla destra">
         </div>
 
-        <!-- qui usare sicuramente vue -->
+        <!-- Caricati oggetti tramite v-for -->
         <div class="menu" >
           <a class="linkMenu" v-for="(links, index) in navLink" :href=`${links.url}`>{{links.name}}</a>
           <a href="#"> <img src="./assets/img/svg/svg-1.svg" alt=""> </a>
         </div>
       </div>
+
+
       <div class="jumbo">
-        <div class="jumboLeft"></div>
-        <div class="jumboRight"></div>
+
+        <i class="jumboSlideLeft prev fas fa-chevron-left" @click="prev"></i>
+
+        <div :class="jumboText" class="jumboLeft" >
+          <h2  class="jumboTitle">{{jumboText[counter].title}}</h2>
+          <p class="jumboSubtext">{{jumboText[counter].subTitle}}</p>
+          <button class="jumboButton"type="button" name="button">Read more</button>
+        </div>
+        <div class="jumboRight">
+          <img class="active first" :src="carouselImages[counter]" alt="">
+        </div>
+
+        <i class="jumboSlideRight next fas fa-chevron-right" @click="next"></i>
+
       </div>
+
     </header>
 
-<!-- ................... Main section................... -->
+<!-- ................... Main section ................... -->
     <main>
       <div class="Macrocards"></div>
       <div class="Workflow"></div>
@@ -42,7 +57,7 @@
 
     </main>
 
-<!-- ................... Footer section................... -->
+<!-- ................... Footer section ................... -->
     <footer>
       <div class="motto"></div>
       <div class="contacts"></div>

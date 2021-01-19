@@ -65,21 +65,67 @@ header{
 /* --------- Jumbotron --------- */
 
 .jumbo{
-  height: 634px;
-  background-color: lightgreen;
+  max-height: 634px;
+  width: 90%;
+  margin: 20px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+.jumbo .jumboSlideLeft{
+  padding: 10px;
+  background-color: #f5d8ca;
+  border-radius: 100%;
+}
+
+.jumbo .jumboSlideRight{
+  padding: 10px;
+  background-color: #f5d8ca;
+  border-radius: 100%;
+}
+
 .jumbo .jumboLeft{
+  margin: 0 60px 0 240px;
   display: flex;
   flex-direction: column;
+  background-color: white;
+}
+
+.jumbo .jumboLeft .jumboTitle{
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.jumbo .jumboLeft .jumboSubtext{
+  color: lightgrey;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.jumbo .jumboLeft .jumboButton{
+  width: 160px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid #f5d8ca;
 
 }
 
 .jumbo .jumboRight{
+  position: relative;
+  margin-right: 90px;
+}
 
+.jumbo .jumboRight img{
+  display: none;
+}
+
+.jumbo .jumboRight img.active{
+  max-width: 500px;
+  display: block;
 }
 
 
