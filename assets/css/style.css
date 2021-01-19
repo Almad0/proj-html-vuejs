@@ -5,12 +5,85 @@
 }
 
 body {
-
+  width: 100%;
 }
 
-.container {
 
+/* --------------------------- Header section --------------------------- */
+
+header{
+  background-color: lightblue;
 }
+
+/* --------- Navbar --------- */
+
+.navbar{
+  height: 100px;
+  width: 90%;
+  margin: auto;
+  background-color: lightyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo{
+}
+
+.navbar .logo img{
+  width: 130px;
+}
+
+.navbar .menu{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* --------- Jumbotron --------- */
+
+.jumbo{
+  height: 634px;
+  background-color: lightgreen;
+}
+
+
+/* --------------------------- Main section --------------------------- */
+
+/* --------- Macrocards --------- */
+
+
+/* --------- Workflow --------- */
+
+
+/* --------- mMssage --------- */
+
+
+/* --------- News --------- */
+
+
+
+
+/* --------------------------- Footer section --------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

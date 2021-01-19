@@ -1,0 +1,44 @@
+1) Analizzare le macroaree dell'intero design
+
+2) Individuare Header, Main e Footer
+
+	 Header separato in:
+		- Navbar (con menù a tendina)
+		- Jumbotron (con carousel)
+
+	Main separato in
+		- Sezione 1: macrocard
+		- Sezione 2: workflow
+		- Sezione 3: Simple contact us
+		- Sezione 4: News card
+
+	Footer separato in
+		- Logo + motto
+		- Contatti mail + telefono
+		- Indirizzi
+		- Social
+
+3) creare le macroaree dell'intero documento (html/css)
+
+4) Individuare i possibili utilizzi di vue
+	Header:	
+		- Menu a tendina navbar
+		- Link navbar
+		- Carousel
+	Main:
+		- Macrocards(forse)
+		- News card (usare dateJs forse)
+	Footer:
+		- Data
+
+5) Creare un fac-simile solo in html/css da sostituire poi con le funzionalità di Vuejs
+
+6) Iniziare ad includere le funzionalità di VueJs all'interno del documento
+
+7) Dettagli:
+	- Rifinire Css
+	- Pointer tondo e colorato
+	- Pointer in hover specifico per sezione
+	- Animazioni su menù e hover
+	- Bottone bottom-to-top-page
+	- Menu laterale
