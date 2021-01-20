@@ -110,7 +110,12 @@ header{
   margin-top: 20px;
   background-color: white;
   border: 1px solid #f5d8ca;
+  transition: 0.5s;
+}
 
+.jumbo .jumboLeft .jumboButton:hover{
+  background-color: #C0E1CF;
+  color: white;
 }
 
 .jumbo .jumboRight{
@@ -139,7 +144,6 @@ header{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-grow:
 }
 
 .macrocards .cardContainer{
@@ -197,7 +201,6 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .workFlow .workFlowBaloon .workFlowBaloonCard{
@@ -231,8 +234,61 @@ header{
 }
 
 
-
 /* --------- Message --------- */
+
+.messageUs{
+  height: 528px;
+  width: 100%;
+  background-image: url("../img/h-2-background-1.jpg");
+  background-size: cover;
+}
+
+.messageUs .container{
+  height: 528px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageUs .container h2{
+  font-size: 60px;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+.messageUs .container p{
+  color: grey;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.messageUs .container button{
+  width: 160px;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 20px 50px 20px 0.3em;
+  margin-top: 20px;
+  background-color: #C0E1CF;
+  border: 1px solid #f5d8ca;
+  transition: 0.5s;
+}
+
+.messageUs .container button:hover{
+  background-color: #F3D0C7;
+  color: white;
+  border: 1px solid #C0E1CF;
+}
+
+
+
+
+
+
+
 
 
 
