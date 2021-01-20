@@ -15,6 +15,7 @@
 <!-- ................... Header section ................... -->
     <header>
 
+<!-- navbar -->
       <div class="navbar">
         <!-- Caricato logo tramite VueJs  -->
         <div class="logo">
@@ -28,7 +29,7 @@
         </div>
       </div>
 
-
+<!-- Jumbotron -->
       <div class="jumbo">
 
         <i class="jumboSlideLeft prev fas fa-chevron-left" @click="prev"></i>
@@ -50,6 +51,7 @@
 
 <!-- ................... Main section ................... -->
     <main>
+<!-- Macrocards -->
       <div class="macrocards">
         <div class="cardContainer" v-for="card in macroCardImg">
           <img :src=`${card.url}` alt="">
@@ -60,7 +62,22 @@
         </div>
       </div>
 
-      <div class="Workflow"></div>
+<!-- workFlow -->
+      <div class="workFlow">
+        <h2>Working <strong><i>process</i></strong></h2>
+        <div class="workFlowBaloon">
+          <div v-for="data in workFlowImg" class="workFlowBaloonCard">
+            <i :class="data.icon" :style="{color:data.color}"></i>
+            <h3>{{data.text}}</h3>
+            <p>{{data.subText}}</p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
 
       <div class="messageUs"></div>
 

@@ -61,7 +61,6 @@ header{
 }
 
 
-
 /* --------- Jumbotron --------- */
 
 .jumbo{
@@ -179,25 +178,81 @@ header{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------- Workflow --------- */
 
+.workFlow {
+  height: 609px;
+}
 
-/* --------- mMssage --------- */
+.workFlow h2{
+  font-size: 60px;
+  font-weight: 200;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.workFlow .workFlowBaloon{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.workFlow .workFlowBaloon .workFlowBaloonCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.workFlow .workFlowBaloon .workFlowBaloonCard:first-child i{
+  padding: 50px 60px;
+}
+
+.workFlow .workFlowBaloon .workFlowBaloonCard i{
+  font-size: 40px;
+  padding: 50px;
+  background-color: #FAF7F1;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.workFlow .workFlowBaloon .workFlowBaloonCard h3{
+  font-weight: 500;
+}
+
+.workFlow .workFlowBaloon .workFlowBaloonCard p{
+  color: grey;
+  margin: 20px 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+
+
+/* --------- Message --------- */
+
+
+
+
+
+
+
+
+
 
 
 /* --------- News --------- */
+
+
+
+
+
+
+
+
 
 
 

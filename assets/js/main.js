@@ -89,7 +89,34 @@ let root = new Vue({
         text: "Dreams and illustration",
         subText: "Dreaming",
       }
-    ]
+    ],
+
+    workFlowImg: [
+      {
+        icon: "far fa-lightbulb",
+        color: "#BADAC9",
+        text: "First theres an idea",
+        subText: "Lorem ipsum dolor sit amet, consectetur repellat ipsam inventore.",
+      },
+      {
+        icon: "fas fa-cloud",
+        color: "#F8D12E",
+        text: "Then we talk about",
+        subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati impedit repellat ipsam inventore.",
+      },
+      {
+        icon: "far fa-comment",
+        color: "#80465F",
+        text: "And we think about",
+        subText: "Lorem amet, consectetur adipisicing elit. Obcaecati impedit repellat ipsam inventore.",
+      },
+      {
+        icon: "fas fa-pen-fancy",
+        color: "#EB6950",
+        text: "So we draw along",
+        subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati.",
+      }
+    ],
   },
 
   mounted() {
