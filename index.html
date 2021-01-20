@@ -50,10 +50,22 @@
 
 <!-- ................... Main section ................... -->
     <main>
-      <div class="Macrocards"></div>
+      <div class="macrocards">
+        <div class="cardContainer" v-for="card in macroCardImg">
+          <img :src=`${card.url}` alt="">
+          <div class="hoverContainer">
+            <h4>{{card.text}}</h4>
+            <p><i>{{card.subText}}</i></p>
+          </div>
+        </div>
+      </div>
+
       <div class="Workflow"></div>
+
       <div class="messageUs"></div>
+
       <div class="newsCard"></div>
+
 
     </main>
 

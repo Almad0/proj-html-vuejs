@@ -56,7 +56,40 @@ let root = new Vue({
       "./assets/img/h-2-slider-img-15.png",
       "./assets/img/short-slider-rev-1-img-3.png",
     ],
-    counter: 0
+    counter: 0,
+
+    macroCardImg: [
+      {
+        url: "./assets/img/h-2-port-img-1.jpg",
+        text: "All this illustration",
+        subText: "letters",
+      },
+      {
+        url: "./assets/img/h-2-port-img-2.jpg",
+        text: "Type and illustration",
+        subText: "Bicycle",
+      },
+      {
+        url: "./assets/img/h-2-port-img-3.jpg",
+        text: "Draw and illustrate",
+        subText: "Brochures",
+      },
+      {
+        url: "./assets/img/h-2-port-img-4.jpg",
+        text: "Illustration of novels",
+        subText: "Books",
+      },
+      {
+        url: "./assets/img/h-2-port-img-5.jpg",
+        text: "Too many illustration",
+        subText: "Smart app",
+      },
+      {
+        url: "./assets/img/h-2-port-img-6.jpg",
+        text: "Dreams and illustration",
+        subText: "Dreaming",
+      }
+    ]
   },
 
   mounted() {
