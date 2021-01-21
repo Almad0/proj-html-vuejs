@@ -383,16 +383,44 @@ header{
 
 
 
-
 /* --------------------------- Footer section --------------------------- */
 
+.footer{
+  width: 100%;
+  height: 228;
+  background-color: #C0E1CF;
+}
 
+.footerContainer {
+  width: 1162px;
+  height: 228px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.footerContainer .footerCard{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
+.footerContainer .footerCard  p{
+    margin: 10px 0;
+}
 
+.footerContainer .footerCard .motto img{
+  width: 130px;
+}
 
-
-
+.footerContainer .footerCard .socials .icon{
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
 
 

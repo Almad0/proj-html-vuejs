@@ -135,6 +135,22 @@ let root = new Vue({
         author: "Carmelo Pinnolo",
       },
     ],
+
+    footerData: [
+      {
+        logo: "./assets/img/logo-sidearea-1.png",
+        motto: "Let’s Get Creative",
+        mail: "maree.qode@gmail.com",
+        number: "+44645 321 789",
+        adress: "Avenue d’Auderghem 101040 Brussels, Belgium",
+        socials: [
+          "fab fa-twitter",
+          "fab fa-pinterest-p",
+          "fab fa-facebook-f",
+          "fab fa-linkedin-in",
+        ],
+      },
+    ],
   },
 
   mounted() {

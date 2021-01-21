@@ -105,11 +105,40 @@
     </main>
 
 <!-- ................... Footer section ................... -->
-    <footer>
-      <div class="motto"></div>
-      <div class="contacts"></div>
-      <div class="address"></div>
-      <div class="socials"></div>
+    <footer class="footer">
+
+      <div class="footerContainer">
+
+        <div class="footerCard">
+          <div class="motto" :class="footerData">
+            <img :src=`${footerData[0].logo}` alt="">
+            <p>{{footerData[0].motto}}</p>
+          </div>
+        </div>
+
+        <div class="footerCard">
+          <div class="contacts" :class="footerData">
+            <p>{{footerData[0].mail}}</p>
+            <p>{{footerData[0].number}}</p>
+          </div>
+        </div>
+
+        <div class="footerCard">
+          <div class="address" :class="footerData">
+            <p>{{footerData[0].adress}}</p>
+          </div>
+        </div>
+
+        <div class="footerCard">
+          <div class="socials">
+            <p>Stay in touch with us</p>
+            <div class="icon">
+              <i v-for="icon in footerData[0].socials" :class=`${icon}`></i>
+          </div>
+        </div>
+
+      </div>
+
     </footer>
 
   </div>
