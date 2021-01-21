@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  cursor: url('../img/PointerGeneric.png'), pointer;
 }
 
 body {
@@ -9,16 +11,13 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
-
 /* --------------------------- Header section --------------------------- */
-
-header{
+header {
   background-color: white;
 }
 
 /* --------- Navbar --------- */
-
-.navbar{
+.navbar {
   height: 100px;
   width: 90%;
   margin: auto;
@@ -27,24 +26,23 @@ header{
   align-items: center;
 }
 
-.navbar .logo{
-}
+.navbar .logo {}
 
-.navbar .logo img{
+.navbar .logo img {
   width: 130px;
 }
 
-.navbar .menu{
+.navbar .menu {
   max-width: 1100px;
   display: flex;
   justify-content: space-between;
 }
 
-.navbar .menu a{
+.navbar .menu a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  padding:20px;
+  padding: 20px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.3em;
@@ -52,7 +50,7 @@ header{
   cursor: url('../img/pointer.png'), pointer;
 }
 
-.navbar .menu .linkMenu:hover::after{
+.navbar .menu .linkMenu:hover::after {
   content: "";
   display: block;
   margin: -9px auto;
@@ -60,10 +58,8 @@ header{
   border-bottom: 10px solid #f5d8ca;
 }
 
-
 /* --------- Jumbotron --------- */
-
-.jumbo{
+.jumbo {
   height: 634px;
   width: 90%;
   margin: 20px auto;
@@ -72,72 +68,105 @@ header{
   align-items: center;
 }
 
-.jumbo .jumboSlideLeft{
-  padding: 10px;
+.jumbo .jumboSlideLeft {}
+
+.jumbo .jumboSlideLeft i {
+  padding: 20px;
   background-color: #f5d8ca;
   border-radius: 100%;
 }
 
-.jumbo .jumboSlideRight{
-  padding: 10px;
+.jumbo .jumboSlideRight {}
+
+.jumbo .jumboSlideRight i {
+  padding: 20px;
   background-color: #f5d8ca;
   border-radius: 100%;
 }
 
-.jumbo .jumboLeft{
-  margin: 0 60px 0 240px;
+.jumbo .JumboCentral {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumbo .jumboLeft {
+  width: 650px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 
-.jumbo .jumboLeft .jumboTitle{
+.jumbo .jumboLeft .jumboTitle {
   font-size: 70px;
   font-weight: 500;
 }
 
-.jumbo .jumboLeft .jumboSubtext{
+.jumbo .jumboLeft .jumboTitle:after{
+	content:attr(data-text);
+	font-weight: 800;
+  font-style: italic;
+}
+
+.jumbo .jumboLeft .jumboSubtext {
   color: lightgrey;
   font-size: 20px;
   margin: 20px 0;
 }
 
-.jumbo .jumboLeft .jumboButton{
+.jumbo .jumboLeft .jumboButton {
   width: 160px;
   font-size: 18px;
   text-transform: uppercase;
   padding: 12px;
   margin-top: 20px;
   background-color: white;
-  border: 1px solid #f5d8ca;
+  border: 2px solid #E1C0B0;
   transition: 0.5s;
 }
 
-.jumbo .jumboLeft .jumboButton:hover{
-  background-color: #C0E1CF;
+.jumbo .jumboLeft .jumboButton:hover {
+  background-color: #f5d8ca;
   color: white;
 }
 
-.jumbo .jumboRight{
+.jumbo .jumboRight {
   position: relative;
-  margin-right: 90px;
+  width: 550px;
 }
 
-.jumbo .jumboRight img{
+.jumbo .jumboRight img {
   display: none;
 }
 
-.jumbo .jumboRight img.active{
-  height: 500px;
+.jumbo .jumboRight .active img {
+  max-width: 500px;
   display: block;
 }
 
+.jumboDotNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.jumboDotNav i {
+  padding: 20px 10px;
+  margin: 0 10px;
+  font-size: 8px;
+  color: #E1C0B0;
+}
+
+.jumboDotNav .active {
+  display: block;
+  transform: scale(1.5);
+}
 
 /* --------------------------- Main section --------------------------- */
-
 /* --------- Macrocards --------- */
-
-.macrocards{
+.macrocards {
   max-height: 1545px;
   width: 100vw;
   display: flex;
@@ -146,7 +175,7 @@ header{
   flex-wrap: wrap;
 }
 
-.macrocards .cardContainer{
+.macrocards .cardContainer {
   position: relative;
   margin: 0;
   padding: 0;
@@ -154,14 +183,14 @@ header{
   height: 33.3%;
 }
 
-.macrocards .cardContainer img{
+.macrocards .cardContainer img {
   width: 100%;
   height: 100%;
   display: block;
   /* controllare------------------------------------ */
 }
 
-.macrocards .cardContainer .hoverContainer{
+.macrocards .cardContainer .hoverContainer {
   opacity: 0;
   background-color: white;
   padding: 20px;
@@ -172,33 +201,31 @@ header{
   transition: opacity 0.5s;
 }
 
-.macrocards .cardContainer .hoverContainer h4{
+.macrocards .cardContainer .hoverContainer h4 {
   font-size: 24px;
 }
 
-.macrocards .cardContainer .hoverContainer p{
+.macrocards .cardContainer .hoverContainer p {
   font-size: 16px;
 }
 
-.macrocards .cardContainer:hover .hoverContainer{
+.macrocards .cardContainer:hover .hoverContainer {
   opacity: 1;
 }
 
-
 /* --------- Workflow --------- */
-
 .workFlow {
   height: 609px;
 }
 
-.workFlow h2{
+.workFlow h2 {
   font-size: 60px;
   font-weight: 200;
   text-align: center;
   margin: 100px 0;
 }
 
-.workFlow .workFlowBaloon{
+.workFlow .workFlowBaloon {
   transition: all 0.5s;
   width: 80%;
   margin: auto;
@@ -207,18 +234,18 @@ header{
   align-items: flex-start;
 }
 
-.workFlow .workFlowBaloon .workFlowBaloonCard{
+.workFlow .workFlowBaloon .workFlowBaloonCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.workFlow .workFlowBaloon .workFlowBaloonCard:first-child i{
+.workFlow .workFlowBaloon .workFlowBaloonCard:first-child i {
   padding: 50px 60px;
 }
 
-.workFlow .workFlowBaloon .workFlowBaloonCard i{
+.workFlow .workFlowBaloon .workFlowBaloonCard i {
   font-size: 40px;
   padding: 50px;
   background-color: #FAF7F1;
@@ -226,28 +253,26 @@ header{
   margin-bottom: 20px;
 }
 
-.workFlow .workFlowBaloon .workFlowBaloonCard h3{
+.workFlow .workFlowBaloon .workFlowBaloonCard h3 {
   font-weight: 500;
 }
 
-.workFlow .workFlowBaloon .workFlowBaloonCard p{
+.workFlow .workFlowBaloon .workFlowBaloonCard p {
   color: grey;
   margin: 20px 0;
   padding: 0 10px;
   text-align: center;
 }
 
-
 /* --------- Message --------- */
-
-.messageUs{
+.messageUs {
   height: 528px;
   width: 100%;
   background-image: url("../img/h-2-background-1.jpg");
   background-size: cover;
 }
 
-.messageUs .container{
+.messageUs .container {
   height: 528px;
   width: 80%;
   margin: auto;
@@ -257,19 +282,19 @@ header{
   align-items: center;
 }
 
-.messageUs .container h2{
+.messageUs .container h2 {
   font-size: 60px;
   font-weight: 200;
   margin-bottom: 50px;
 }
 
-.messageUs .container p{
+.messageUs .container p {
   color: grey;
   font-size: 16px;
   margin-bottom: 30px;
 }
 
-.messageUs .container button{
+.messageUs .container button {
   width: 160px;
   font-size: 14px;
   letter-spacing: 0.3em;
@@ -281,26 +306,23 @@ header{
   transition: 0.5s;
 }
 
-.messageUs .container button:hover{
+.messageUs .container button:hover {
   background-color: #F3D0C7;
   color: white;
   border: 1px solid #C0E1CF;
 }
 
-
 /* --------- News --------- */
-
-
-.news{
+.news {
   height: 723px;
   width: 1300px;
   margin: auto;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.news .newsCard{
+.news .newsCard {
   width: 413px;
   display: flex;
   flex-direction: column;
@@ -309,48 +331,48 @@ header{
   position: relative;
 }
 
-.news .newsCard > *{
+.news .newsCard>* {
   margin-bottom: 20px;
 }
 
-.news .newsCard img{
+.news .newsCard img {
   display: block;
   max-width: 413px;
   height: 298px;
   transition: transform 0.3s;
 }
 
-.news .newsCard h4{
+.news .newsCard h4 {
   font-size: 24px;
   font-weight: 600;
 }
 
-.news .newsOverlay{
+.news .newsOverlay {
   position: absolute;
   top: -15px;
   left: 15px;
 }
 
-.news .newsOverlay .day{
+.news .newsOverlay .day {
   width: 65px;
   height: 43px;
   background-color: #C0E1CF;
 }
 
-.news .newsOverlay .day p{
+.news .newsOverlay .day p {
   text-align: center;
   font-size: 32px;
   font-weight: 900;
 }
 
-.news .newsOverlay .month{
+.news .newsOverlay .month {
   width: 65px;
   height: 27px;
   background-color: #F3D0C7;
   position: relative;
 }
 
-.news .newsOverlay .month p{
+.news .newsOverlay .month p {
   padding-top: 4px;
   text-align: center;
   font-size: 14px;
@@ -377,18 +399,16 @@ header{
   border-left: 37px solid transparent;
 }
 
-.news .newsCard img:hover{
+.news .newsCard img:hover {
   transform: scale(1.1);
 }
 
-
-
 /* --------------------------- Footer section --------------------------- */
-
-.footer{
+.footer {
   width: 100%;
   height: 228;
   background-color: #C0E1CF;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
 .footerContainer {
@@ -398,42 +418,61 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
-.footerContainer .footerCard{
+.footerContainer .footerCard {
   width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
-.footerContainer .footerCard  p{
-    margin: 10px 0;
+.footerContainer .footerCard .motto {
+  cursor: url('../img/pointer.png'), pointer;
 }
 
-.footerContainer .footerCard .motto img{
+.footerContainer .footerCard p {
+  margin: 10px 0;
+  cursor: url('../img/pointer.png'), pointer;
+}
+
+.footerContainer .footerCard .motto img {
   width: 130px;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
-.footerContainer .footerCard .socials .icon{
+.footerContainer .footerCard .socials {
+  cursor: url('../img/pointer.png'), pointer;
+}
+
+.footerContainer .footerCard .socials .icon {
   margin: 10px 0;
   display: flex;
   justify-content: space-between;
+  cursor: url('../img/pointer.png'), pointer;
 }
 
+.footerContainer .footerCard .socials .icon i {
+  cursor: url('../img/pointer.png'), pointer;
+}
 
+/* bottone up page */
+.scollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: url('../img/pointer.png'), pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.scollToTop i {
+  font-size: 24px;
+  padding: 15px;
+  color: white;
+  background-color: #C0E1CF;
+  cursor: url('../img/pointer.png'), pointer;
+}
 
 /* fine */

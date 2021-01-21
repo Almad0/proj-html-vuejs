@@ -5,53 +5,65 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>Marèe clone</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <div id="root">
-<!-- ................... Header section ................... -->
+    <!-- ................... Header section ................... -->
     <header>
 
-<!-- navbar -->
+      <!-- navbar -->
       <div class="navbar">
         <!-- Caricato logo tramite VueJs  -->
         <div class="logo">
-          <img :src=`${logo}` alt="Scritta Mareè con foglioline color salmone sulla destra">
+          <img :src=`${logo}` alt="Scritta Marèe con foglioline color salmone sulla destra">
         </div>
 
         <!-- Caricati oggetti tramite v-for -->
-        <div class="menu" >
+        <div class="menu">
           <a class="linkMenu" v-for="(links, index) in navLink" :href=`${links.url}`>{{links.name}}</a>
           <a href="#"> <img src="./assets/img/svg/svg-1.svg" alt=""> </a>
         </div>
       </div>
 
-<!-- Jumbotron -->
+      <!-- Jumbotron -->
       <div class="jumbo">
 
-        <i class="jumboSlideLeft prev fas fa-chevron-left" @click="prev"></i>
-
-        <div :class="jumboText" class="jumboLeft" >
-          <h2  class="jumboTitle">{{jumboText[counter].title}}</h2>
-          <p class="jumboSubtext">{{jumboText[counter].subTitle}}</p>
-          <button class="jumboButton"type="button" name="button">Read more</button>
-        </div>
-        <div class="jumboRight">
-          <img class="active first" :src="carouselImages[counter]" alt="">
+        <div class="jumboSlideLeft prev">
+          <i class="fas fa-chevron-left" @click="prev"></i>
         </div>
 
-        <i class="jumboSlideRight next fas fa-chevron-right" @click="next"></i>
+        <div class="JumboCentral">
+          <div :class="jumboText" class="jumboLeft">
+            <h2 class="jumboTitle" :data-text=`${jumboText[counter].lastWord}` >{{jumboText[counter].title}}</h2>
+            <p class="jumboSubtext">{{jumboText[counter].subTitle}}</p>
+            <button class="jumboButton" type="button" name="button">Read more</button>
+          </div>
+          <div class="jumboRight">
+            <div class="active">
+              <img :src="sliderImg[counter]" alt="">
+            </div>
+          </div>
+        </div>
 
+        <div class="jumboSlideRight next">
+          <i class="fas fa-chevron-right" @click="next"></i>
+        </div>
+
+      </div>
+
+      <div class="jumboDotNav">
+        <i class="fas fa-circle" :class="(index === counter) ? 'active' : '' " v-for="(dot, index) in sliderImg" @click="choose(index)"></i>
       </div>
 
     </header>
 
-<!-- ................... Main section ................... -->
+    <!-- ................... Main section ................... -->
     <main>
-<!-- Macrocards -->
+      <!-- Macrocards -->
       <div class="macrocards">
         <div class="cardContainer" v-for="card in macroCardImg">
           <img :src=`${card.url}` alt="">
@@ -62,7 +74,7 @@
         </div>
       </div>
 
-<!-- workFlow -->
+      <!-- workFlow -->
       <div class="workFlow">
         <h2>Working <strong><i>process</i></strong></h2>
         <div class="workFlowBaloon">
@@ -74,7 +86,7 @@
         </div>
       </div>
 
-<!-- MessageUs -->
+      <!-- MessageUs -->
       <div class="messageUs">
         <div class="container">
           <h2>Want to work with us? Send us <strong><i>a message!</i></strong></h2>
@@ -83,7 +95,7 @@
         </div>
       </div>
 
-<!-- News -->
+      <!-- News -->
       <div class="news">
         <div class="newsCard" v-for="news in newsImg">
           <img :src=`${news.url}` alt="">
@@ -104,7 +116,7 @@
 
     </main>
 
-<!-- ................... Footer section ................... -->
+    <!-- ................... Footer section ................... -->
     <footer class="footer">
 
       <div class="footerContainer">
@@ -134,12 +146,16 @@
             <p>Stay in touch with us</p>
             <div class="icon">
               <i v-for="icon in footerData[0].socials" :class=`${icon}`></i>
+            </div>
           </div>
+
         </div>
 
-      </div>
-
     </footer>
+
+    <div class="scollToTop" @click="topScroll">
+      <i class="fas fa-arrow-up"></i>
+    </div>
 
   </div>
 

@@ -4,8 +4,7 @@ let root = new Vue({
 
   data: {
     logo: "./assets/img/logo-sidearea-1.png",
-    navLink: [
-      {
+    navLink: [{
         name: "home",
         url: "www.google.com",
         subMenu: [{}],
@@ -37,29 +36,32 @@ let root = new Vue({
       }
     ],
 
-    jumboText: [
-      {
-        title: "Devotion that never ends",
+    jumboText: [{
+        title: "Devotion that never ",
+        lastWord: "ends",
         subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, unde, enim cupiditate amet ipsum id"
       },
       {
-        title: "Projects made with love",
+        title: "Projects made with ",
+        lastWord: "love",
         subTitle: "Cose scritte a caso che servono a non usare sempre lo stesso lorem ipsum che è molto utile ma anche basta"
       },
       {
-        title: "Our new folio full of joy",
+        title: "Our new folio full of ",
+        lastWord: "joy",
         subTitle: "lref edfuuuer ioeujf eoijoijojo fee fefefsef oij aojgvòawe aòeoifj e aòoie"
       }
     ],
-    carouselImages:[
+
+    sliderImg: [
       "./assets/img/h-2-slider-img-11.png",
       "./assets/img/h-2-slider-img-15.png",
       "./assets/img/short-slider-rev-1-img-3.png",
     ],
+
     counter: 0,
 
-    macroCardImg: [
-      {
+    macroCardImg: [{
         url: "./assets/img/h-2-port-img-1.jpg",
         text: "All this illustration",
         subText: "letters",
@@ -91,8 +93,7 @@ let root = new Vue({
       }
     ],
 
-    workFlowImg: [
-      {
+    workFlowImg: [{
         icon: "far fa-lightbulb",
         color: "#BADAC9",
         text: "First theres an idea",
@@ -118,8 +119,7 @@ let root = new Vue({
       }
     ],
 
-    newsImg: [
-      {
+    newsImg: [{
         url: "./assets/img/h-2-blog-img-1.jpg",
         text: "This way, loves: a detailed guide through new design",
         author: "Emily Fields",
@@ -136,21 +136,19 @@ let root = new Vue({
       },
     ],
 
-    footerData: [
-      {
-        logo: "./assets/img/logo-sidearea-1.png",
-        motto: "Let’s Get Creative",
-        mail: "maree.qode@gmail.com",
-        number: "+44645 321 789",
-        adress: "Avenue d’Auderghem 101040 Brussels, Belgium",
-        socials: [
-          "fab fa-twitter",
-          "fab fa-pinterest-p",
-          "fab fa-facebook-f",
-          "fab fa-linkedin-in",
-        ],
-      },
-    ],
+    footerData: [{
+      logo: "./assets/img/logo-sidearea-1.png",
+      motto: "Let’s Get Creative",
+      mail: "maree.qode@gmail.com",
+      number: "+44645 321 789",
+      adress: "Avenue d’Auderghem 101040 Brussels, Belgium",
+      socials: [
+        "fab fa-twitter",
+        "fab fa-pinterest-p",
+        "fab fa-facebook-f",
+        "fab fa-linkedin-in",
+      ],
+    }, ],
   },
 
   mounted() {
@@ -158,24 +156,33 @@ let root = new Vue({
   },
 
   methods: {
-    next(){
+    next() {
       this.counter++;
-      if(this.counter > this.carouselImages.length-1){
+      if (this.counter > this.sliderImg.length - 1) {
         this.counter = 0;
       }
     },
 
-    prev(){
+    prev() {
       this.counter--;
-      if(this.counter < 0){
-        this.counter = this.carouselImages.length-1;
+      if (this.counter < 0) {
+        this.counter = this.sliderImg.length - 1;
       }
+
+    },
+
+    choose(index) {
+      this.counter = index;
+    },
+
+    topScroll() {
+      window.scrollTo(0, 0);
     },
 
   },
 
-  created(){
-    setInterval(this.next, 5000);
+  created() {
+    setInterval(this.next, 8000);
   },
 
 });
