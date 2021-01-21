@@ -84,8 +84,23 @@
       </div>
 
 <!-- News -->
-      <div class="newsCard"></div>
-
+      <div class="news">
+        <div class="newsCard" v-for="news in newsImg">
+          <img :src=`${news.url}` alt="">
+          <h4>{{news.text}}</h4>
+          <p><i>By {{news.author}}</i></p>
+          <div class="newsOverlay">
+            <div class="day">
+              <p>07</p>
+            </div>
+            <div class="month">
+              <p>may '19</p>
+            </div>
+            <div class="monthLeftTriangle"></div>
+            <div class="monthRightTriangle"></div>
+          </div>
+        </div>
+      </div>
 
     </main>
 

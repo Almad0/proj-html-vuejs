@@ -157,10 +157,19 @@ header{
 .macrocards .cardContainer img{
   width: 100%;
   height: 100%;
+  display: block;
+  /* controllare------------------------------------ */
 }
 
 .macrocards .cardContainer .hoverContainer{
-  display: none;
+  opacity: 0;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.5s;
 }
 
 .macrocards .cardContainer .hoverContainer h4{
@@ -172,13 +181,7 @@ header{
 }
 
 .macrocards .cardContainer:hover .hoverContainer{
-  display: block;
-  background-color: white;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  opacity: 1;
 }
 
 
@@ -196,11 +199,12 @@ header{
 }
 
 .workFlow .workFlowBaloon{
+  transition: all 0.5s;
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .workFlow .workFlowBaloon .workFlowBaloonCard{
@@ -270,7 +274,7 @@ header{
   font-size: 14px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  padding: 20px 50px 20px 0.3em;
+  padding: 15px 30px;
   margin-top: 20px;
   background-color: #C0E1CF;
   border: 1px solid #f5d8ca;
@@ -284,31 +288,98 @@ header{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------- News --------- */
 
 
+.news{
+  height: 723px;
+  width: 1300px;
+  margin: auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.news .newsCard{
+  width: 413px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
 
+.news .newsCard > *{
+  margin-bottom: 20px;
+}
 
+.news .newsCard img{
+  display: block;
+  max-width: 413px;
+  height: 298px;
+  transition: transform 0.3s;
+}
 
+.news .newsCard h4{
+  font-size: 24px;
+  font-weight: 600;
+}
 
+.news .newsOverlay{
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
 
+.news .newsOverlay .day{
+  width: 65px;
+  height: 43px;
+  background-color: #C0E1CF;
+}
+
+.news .newsOverlay .day p{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.news .newsOverlay .month{
+  width: 65px;
+  height: 27px;
+  background-color: #F3D0C7;
+  position: relative;
+}
+
+.news .newsOverlay .month p{
+  padding-top: 4px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.monthLeftTriangle {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 18px solid #F3D0C7;
+  border-right: 37px solid transparent;
+}
+
+.monthRightTriangle {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 18px solid #F3D0C7;
+  border-left: 37px solid transparent;
+}
+
+.news .newsCard img:hover{
+  transform: scale(1.1);
+}
 
 
 

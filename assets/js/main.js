@@ -117,6 +117,24 @@ let root = new Vue({
         subText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati.",
       }
     ],
+
+    newsImg: [
+      {
+        url: "./assets/img/h-2-blog-img-1.jpg",
+        text: "This way, loves: a detailed guide through new design",
+        author: "Emily Fields",
+      },
+      {
+        url: "./assets/img/h-2-blog-img-2.jpg",
+        text: "I try to give people a different way of looking art",
+        author: "Massimo Voltaggio",
+      },
+      {
+        url: "./assets/img/h-2-blog-img-3.jpg",
+        text: "Introduce Richard Laperrière of those amazing features",
+        author: "Carmelo Pinnolo",
+      },
+    ],
   },
 
   mounted() {
@@ -137,6 +155,7 @@ let root = new Vue({
         this.counter = this.carouselImages.length-1;
       }
     },
+
   },
 
   created(){
