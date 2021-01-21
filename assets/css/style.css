@@ -136,13 +136,31 @@ header {
   width: 550px;
 }
 
-.jumbo .jumboRight img {
+.jumbo .jumboRight img:first-child {
   display: none;
 }
 
-.jumbo .jumboRight .active img {
+.jumbo .jumboRight .active img:first-child {
   max-width: 500px;
   display: block;
+}
+
+.jumbo .jumboRight #fly1{
+  position: absolute;
+  top: -30px;
+  right: 10px;
+}
+
+.jumbo .jumboRight #ground1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.jumbo .jumboRight #ground2{
+  position: absolute;
+  bottom: 0;
+  right: -30px;
 }
 
 .jumboDotNav {
